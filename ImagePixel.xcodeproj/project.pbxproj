@@ -15,6 +15,7 @@
 		934183D41E7A24BA0000C590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934183D21E7A24BA0000C590 /* LaunchScreen.storyboard */; };
 		934183DF1E7A24BA0000C590 /* ImagePixelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 934183DE1E7A24BA0000C590 /* ImagePixelTests.m */; };
 		934183EA1E7A24BA0000C590 /* ImagePixelUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 934183E91E7A24BA0000C590 /* ImagePixelUITests.m */; };
+		93A0F4CB1E7FCAAE00301528 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 93A0F4CA1E7FCAAE00301528 /* 11.png */; };
 		A30B44491E7B928E00341936 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B44481E7B928E00341936 /* Utils.m */; };
 		A30B444C1E7BB0BC00341936 /* Color.m in Sources */ = {isa = PBXBuildFile; fileRef = A30B444B1E7BB0BC00341936 /* Color.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		934183E51E7A24BA0000C590 /* ImagePixelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImagePixelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		934183E91E7A24BA0000C590 /* ImagePixelUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePixelUITests.m; sourceTree = "<group>"; };
 		934183EB1E7A24BA0000C590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A0F4CA1E7FCAAE00301528 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		A30B44471E7B928E00341936 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		A30B44481E7B928E00341936 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		A30B444A1E7BB0BC00341936 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 		934183C31E7A24BA0000C590 /* ImagePixel */ = {
 			isa = PBXGroup;
 			children = (
+				93A0F4CA1E7FCAAE00301528 /* 11.png */,
 				934183C71E7A24BA0000C590 /* AppDelegate.h */,
 				934183C81E7A24BA0000C590 /* AppDelegate.m */,
 				934183CA1E7A24BA0000C590 /* ViewController.h */,
@@ -260,6 +263,7 @@
 				934183D41E7A24BA0000C590 /* LaunchScreen.storyboard in Resources */,
 				934183D11E7A24BA0000C590 /* Assets.xcassets in Resources */,
 				934183CF1E7A24BA0000C590 /* Main.storyboard in Resources */,
+				93A0F4CB1E7FCAAE00301528 /* 11.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,26 +37,28 @@
     
     //图片高度
     UIImage *_img = [UIImage imageNamed:@"match_point_left"];
-    float _biLv=(ScreenHeight/568.0);
+    UIImage *_bgimg = [UIImage imageNamed:@"11.png"];
     _bottomHeight = _img.size.height;
     _bottomWidth = _img.size.width;
-    _y = ScreenHeight - 100*_biLv + 10;
-    _x = 10;
+    _y = ScreenHeight - _img.size.height  ;
+    //    _y = 200;
+    _x = 5;
     
     //left
-    UIImageView * _view = [[UIImageView alloc]initWithFrame:CGRectMake(_x,  _y , _img.size.width, _img.size.height)];
+    UIImageView * _viewbg = [[UIImageView alloc]initWithFrame:CGRectMake(0,  0 , ScreenWidth, ScreenHeight)];
+    _viewbg.image = _bgimg;
+    [self.view addSubview:_viewbg];
     
-    UIImage *image = [Utils ct_imageFromImage:self.bgImage.image inRect:CGRectMake(_x, _y, _bottomWidth, _bottomHeight)];
+    UIImageView * _view = [[UIImageView alloc]initWithFrame:CGRectMake(_x,  _y , _img.size.width, _img.size.height)];
+    UIImage *image = [Utils ct_imageFromImage:_bgimg inRect:CGRectMake(_x, _y, _bottomWidth, _bottomHeight)];
     [Utils getPix:image andPixArray:pixArray];
     UIImage *resltImag = [Utils getResultImageWit:pixArray andBeginImage:_img];
     
     _view.image = resltImag;
-    
 
     [self.view addSubview:_view];
-   
+    
 }
-
 
 
 

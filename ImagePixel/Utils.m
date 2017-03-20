@@ -101,12 +101,13 @@
     //把像 素rect 转化为 点rect（如无转化则按原图像素取部分图片）
     CGFloat scale = [UIScreen mainScreen].scale;
     CGFloat x= rect.origin.x,y=rect.origin.y,w=rect.size.width,h=rect.size.height;
-    CGRect dianRect = CGRectMake(x, y, w*scale, h*scale);
+    //    CGRect dianRect = CGRectMake(x*scale, y*scale, w*scale, h*scale);
+    CGRect dianRect = CGRectMake(x*scale, image.size.height - h*scale, w*scale, h*scale);
     
     //截取部分图片并生成新图片
     CGImageRef sourceImageRef = [image CGImage];
     CGImageRef newImageRef = CGImageCreateWithImageInRect(sourceImageRef, dianRect);
-    UIImage *newImage = [UIImage imageWithCGImage:newImageRef scale:[UIScreen mainScreen].scale orientation:UIImageOrientationUp];
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef scale:scale orientation:UIImageOrientationUp];
     return newImage;
 }
 
@@ -339,7 +340,8 @@
             blue = *(tmp + 2);
             alpa = *(tmp + 3);
             
-            if(alpa != 0){
+            //透明的不反色 设置白色反色
+            if(alpa != 0 && *(tmp + 0) > 240  && *(tmp + 1) > 240 && *(tmp + 2) >240 ){
                 *(tmp + 0) = color.r;
                 *(tmp + 1) = color.g;
                 *(tmp + 2) = color.b;
